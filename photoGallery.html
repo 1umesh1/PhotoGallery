@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Photo Gallery </title>
+    <meta name="description" content="Page Description Here"/>
+    <meta http-equiv="Content-Type" content="text/html"; charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    <style>
+        body{
+            background: #222;
+            margin-top:50px;
+            margin-left: 50px;
+            margin-right: 50px;
+            font-family: arial;
+            color: white;
+        }
+        
+        .thumbnails img{
+            height: 100px;
+            border: 4px solid #555;
+            padding: 1px;
+            margin: 0 10px 10px 0;
+        }
+
+        .thumbnails img:hover{
+            border: 4px solid #00ccff;
+           
+        }
+        
+        .preview img{
+            border: 4px solid #444;
+            padding: 1px;
+            width: 100%;
+            height: 500px;
+            margin-bottom: 500px;
+        }
+
+    </style>
+     <script type="text/javascript">
+       function bgcolor(body){
+            var bgcolor=new Array("#029FD4", "#D43702", "#1EFF00", "#EAEAFF", "#FFEA00", "#AB5252", "#FFFFFF", "#DE28D8")
+         var randomNumber = Math.floor(Math.random()*bgcolor.length)
+         document.body.style.background=bgcolor[Math.floor(Math.random()*bgcolor.length)]
+   
+       }
+         
+          
+  
+       
+    </script>
+</head>
+
+<body>
+<div id="container" align="center">
+    <h1 style="color: violet"> My Web Page Gallery</h1>
+    <br>
+    
+    <div class="thumbnails">
+     
+        <img onclick="preview.src=img1.src,bgcolor(this.body)"  name="img1" src="images/img1.jpg">
+        <img onclick="preview.src=img2.src,bgcolor(this.body)" name="img2" src="images/img2.jpg">
+        <img onclick="preview.src=img3.src,bgcolor(this.body)" name="img3" src="images/img3.jpg">
+        <img onclick="preview.src=img4.src,bgcolor(this.body)" name="img4" src="images/img4.jpg">
+        <img onclick="preview.src=img5.src,bgcolor(this.body)" name="img5" src="images/img5.jpg">
+     </div>
+     <br>
+     <div class="preview" align="center">
+         <img name="preview" src="images/img1.jpg">
+     </div>
+    
+    
+    
+</div>
+    
+ 
+
+ 
+</body>
+
+</html>
